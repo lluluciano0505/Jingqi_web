@@ -1,0 +1,137 @@
+# Education
+
+- city: Philadelphia
+  region: United States
+  institution: University of Pennsylvania
+  role: M.S. in Urban Spatial Analytics (MUSA)
+  section: Education
+  category: Graduate School
+  period: 2025.08 - 2026.05
+  latitude: 39.9526
+  longitude: -75.1932
+  summary: Graduate study combining spatial data science, machine learning, and urban systems analysis.
+  details:
+    - "Relevant coursework: Statistics & Data Mining | Python for Geospatial | Urban Sustainability AI | Remote Sensing & ML | Behavioral & Network Science"
+    - GPA 3.93 / 4.0 (Top 5%)
+  tags:
+    - MUSA
+    - Geospatial Data Science
+    - Urban Analytics
+
+- city: London
+  region: United Kingdom
+  institution: University College London
+  role: B.A. in Geography (Social Data Science)
+  section: Education
+  category: Degree
+  period: 2022.09 - 2025.06
+  latitude: 51.5246
+  longitude: -0.1340
+  summary: Bachelor's training in geography, social data science, and computational methods for spatial analysis.
+  details:
+    - "Relevant coursework: Data Analysis | Geocomputation | Cartography & Data Visualization | Applied Machine Learning"
+    - Awarded Second Class Honours, Upper Division (2:1)
+  tags:
+    - Geography
+    - Social Data Science
+    - Geocomputation
+
+- city: Amsterdam
+  region: Netherlands
+  institution: University of Amsterdam
+  role: Erasmus Exchange — B.A. Geography & Planning
+  section: Education
+  category: Exchange
+  period: 2024.09 - 2024.12
+  latitude: 52.3559
+  longitude: 4.9550
+  summary: Exchange term focused on inequality, migration, and planning perspectives in European urban contexts.
+  details:
+    - Relevant coursework in migration and population dynamics.
+    - Relevant coursework in geography of inequality.
+  tags:
+    - Exchange
+    - Migration
+    - Planning
+
+# Experience
+
+- city: Philadelphia
+  region: United States
+  institution: University of Pennsylvania
+  role: Research Assistant
+  section: Experience
+  category: Research
+  period: 2026.02 - 2026.05
+  latitude: 39.9526
+  longitude: -75.1932
+  summary: Designed and implemented a 4-stage Multi-Agent scraping pipeline covering 1,600+ libraries, museums, and arts centers across Pennsylvania.
+  details:
+    - "Designed and implemented a 4-stage Multi-Agent scraping pipeline (OSM venue discovery → homepage navigation → event-page extraction → Perplexity fallback) covering 1,600+ libraries, museums, and arts centers across Pennsylvania to automatically collect event time, location, and type data."
+    - "Built a SQLite-backed adaptive memory system maintaining an independent Playbook per venue (known event-page URLs, scraping strategies, failure logs), combined with EMA quality feedback and a priority-scheduling algorithm (days overdue × yield × venue weight) enabling continuous self-optimization without human intervention."
+    - "Developed a rule-engine Judge Agent to score (0–1) and adjudicate (accept / review / reject) extraction results, and built a knowledge-graph module supporting cross-venue programming-profile analysis and similar-venue discovery via regex tag extraction and Jaccard similarity."
+  tags:
+    - Multi-Agent Systems
+    - Web Scraping
+    - SQLite
+    - Urban Events
+
+- city: Copenhagen
+  region: Denmark
+  institution: Henning Larsen
+  role: Data Classification System for Architectural Practice
+  section: Experience
+  category: Research Practice
+  period: 2026.01 - Present
+  latitude: 55.6761
+  longitude: 12.5683
+  summary: Designed and deployed an AI pipeline to fully automate classification of 500+ unstructured architectural documents from large-scale urban planning projects.
+  details:
+    - "Designed and deployed a 4-layer LLM classification pipeline (routing extraction → 7-dimensional classification → design-influence scoring → risk review) to fully automate classification of 500+ unstructured architectural documents from large-scale urban planning projects such as Faelledby."
+    - "Implemented two RAG modes: folder-sibling RAG for context recall from adjacent files, and project intelligence RAG for extracting open design decisions from meeting minutes, enhancing project-context awareness."
+    - Designed a dynamic VLM Agent Gate that automatically determines whether to activate the vision model based on pre-screening signals, reducing unnecessary API calls while maintaining accuracy.
+    - "Built a design-influence scoring model (0–100) using a 4-dimensional geometric mean covering constraint rigidity, decision-chain position, phase alignment, and substitutability, quantifying each document's strategic impact on active design decisions to drive Review Queue prioritization."
+    - "Integrated multiple LLMs/VLMs via OpenRouter with 10-way parallel processing; supports incremental mode and conditional selective re-runs for production efficiency and iteration flexibility."
+  tags:
+    - LLM Pipeline
+    - RAG
+    - VLM
+    - OpenRouter
+    - Data Taxonomy
+
+- city: Qingdao
+  region: China
+  institution: Hisense Cold Chain
+  role: Sales Assistant
+  section: Experience
+  category: Industry
+  period: 2024.07 - 2024.08
+  latitude: 36.0671
+  longitude: 120.3826
+  summary: Supported commercial analytics, tender preparation, and sales operations with structured data workflows.
+  details:
+    - Systematically organized and analyzed hundreds of WeChat customer feedback entries using keyword categorization and text structuring to surface high-frequency needs and common pain points for the sales team.
+    - Verified and modeled tender cost data in Excel, assisted in estimating competitive bid price ranges to support quotation decisions.
+    - Participated end-to-end in tendering projects, handling data organization and visualization, bid-document writing, and presentation preparation.
+  tags:
+    - Data Analysis
+    - Excel
+    - Business Support
+
+- city: Hefei
+  region: China
+  institution: New Oriental Future Abroad
+  role: IELTS Teaching Assistant
+  section: Experience
+  category: Teaching
+  period: 2023.07 - 2023.09
+  latitude: 31.8206
+  longitude: 117.2272
+  summary: Supported IELTS teaching delivery and student preparation in speaking and vocabulary development.
+  details:
+    - Led IELTS speaking practice sessions, providing targeted feedback on fluency, pronunciation, and coherence.
+    - Organized vocabulary quizzes and graded mock IELTS papers with detailed written feedback.
+  tags:
+    - Teaching
+    - Communication
+    - Assessment

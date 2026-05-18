@@ -1,0 +1,50 @@
+#-------------------------------
+# General Site Settings
+
+logo: '/assets/img/musa-logo.png'
+
+intro_title: AI & Geospatial ML Engineer
+intro_text: |
+  I build AI agent systems and LLM-powered pipelines that turn unstructured data into structured, queryable knowledge.
+
+  Currently leading an AI agent–based data classification system at Henning Larsen, integrating multiple LLMs and VLMs via OpenRouter to automate semantic parsing of large-scale architectural project files. Also building AI-driven urban event databases at UPenn using automated scraping agents.
+
+  Skilled in Python, LLM/VLM integration, agentic modeling, deep learning (CNN, Mask R-CNN, U-Net), and geospatial engineering. Open to AI/ML engineering roles in urban tech, data infrastructure, or applied AI.
+  
+resume: '/resume'
+resume_link_title: View CV
+
+menu:
+- {name: 'Projects', url: ' '}
+- {name: 'Experience', url: 'experience'}
+- {name: 'Blog and Creation',     url: 'blog'}
+- {name: 'About',    url: 'about'}
+
+#-------------------------------
+# Contact Section
+
+social_label: Connect
+social:
+- {icon: 'github',   link: 'https://github.com/lluluciano0505'}
+- {icon: 'linkedin', link: 'https://www.linkedin.com/in/jingqi-lu-04a910266'}
+- {icon: 'envelope', link: 'mailto:lluluciano0505@gmail.com'}
+
+#-------------------------------
+# SEO Section
+
+seo:
+  description: 'Jingqi Lu | MUSA Student at UPenn | Spatial Data, AI Agent Modelling, Mobility & Spatial Justice'
+  rel-author: ''
+  rel-publisher: ''
+
+#-------------------------------
+# Google Analytics Section
+
+google-analytics-ua: ''
+
+#-------------------------------
+# Disqus Section
+
+disqus:
+  comments: false
+  disqus_shortname: ''
