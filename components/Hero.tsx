@@ -142,7 +142,7 @@ export default function Hero({ settings }: HeroProps) {
                 alt="Jingqi Lu"
                 width={208}
                 height={208}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 priority
               />
             </div>
