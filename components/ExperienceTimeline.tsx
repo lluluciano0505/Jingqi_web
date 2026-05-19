@@ -35,8 +35,12 @@ function TimelineEntry({ entry, isActive, index }: TimelineEntryProps) {
     >
       <div className="flex flex-wrap justify-between items-start gap-2">
         <div>
-          <h4 className="font-semibold text-slate-900">{entry.institution}</h4>
-          <p className="text-sm text-brand mt-0.5">{entry.role}</p>
+          <h4 className="font-semibold text-slate-900">
+            {locale === "zh" && entry.institution_zh ? entry.institution_zh : entry.institution}
+          </h4>
+          <p className="text-sm text-brand mt-0.5">
+            {locale === "zh" && entry.role_zh ? entry.role_zh : entry.role}
+          </p>
           <p className="text-xs text-slate-400 mt-0.5">
             {entry.city}, {entry.region}
           </p>
@@ -44,7 +48,9 @@ function TimelineEntry({ entry, isActive, index }: TimelineEntryProps) {
         <span className="text-xs text-slate-400 whitespace-nowrap">{entry.period}</span>
       </div>
 
-      <p className="mt-2 text-sm text-slate-600">{entry.summary}</p>
+      <p className="mt-2 text-sm text-slate-600">
+        {locale === "zh" && entry.summary_zh ? entry.summary_zh : entry.summary}
+      </p>
 
       {entry.details && entry.details.length > 0 && (
         <button
@@ -57,7 +63,7 @@ function TimelineEntry({ entry, isActive, index }: TimelineEntryProps) {
 
       {expanded && (
         <ul className="mt-2 space-y-1">
-          {entry.details.map((d, i) => (
+          {(locale === "zh" && entry.details_zh?.length ? entry.details_zh : entry.details).map((d, i) => (
             <li key={i} className="text-xs text-slate-600 flex gap-2">
               <span className="text-brand mt-0.5">•</span>
               <span>{d}</span>

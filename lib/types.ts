@@ -26,7 +26,9 @@ export interface Post {
 
 export interface ExperienceEntry {
   institution: string;
+  institution_zh?: string;
   role: string;
+  role_zh?: string;
   section: "Education" | "Experience";
   period: string;
   city: string;
@@ -34,7 +36,9 @@ export interface ExperienceEntry {
   latitude: number;
   longitude: number;
   summary: string;
+  summary_zh?: string;
   details: string[];
+  details_zh?: string[];
   tags: string[];
 }
 
