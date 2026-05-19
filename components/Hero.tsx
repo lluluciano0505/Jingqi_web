@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import type { SiteSettings } from "@/lib/types";
 import { useLocale } from "@/context/LocaleContext";
 import { translations } from "@/lib/translations";
@@ -66,62 +67,88 @@ export default function Hero({ settings }: HeroProps) {
 
   return (
     <section id="home" className="min-h-screen flex items-center pt-16">
-      <div className="max-w-5xl mx-auto px-6 py-24">
-        <motion.h1
-          className="text-5xl sm:text-6xl font-bold text-slate-900 leading-tight"
-          {...fadeUp(0)}
-        >
-          Jingqi Lu
-        </motion.h1>
+      <div className="max-w-5xl mx-auto px-6 py-24 w-full">
+        <div className="flex flex-col-reverse sm:flex-row items-center sm:items-start gap-10 sm:gap-16">
 
-        <motion.p
-          className="mt-3 text-xl sm:text-2xl font-medium text-brand"
-          {...fadeUp(0.1)}
-        >
-          {introTitle}
-        </motion.p>
+          {/* Text */}
+          <div className="flex-1 min-w-0">
+            <motion.h1
+              className="text-5xl sm:text-6xl font-bold text-slate-900 leading-tight"
+              {...fadeUp(0)}
+            >
+              Jingqi Lu
+            </motion.h1>
 
-        <motion.div
-          className="mt-6 max-w-2xl space-y-3 text-slate-600 leading-relaxed"
-          {...fadeUp(0.2)}
-        >
-          {paragraphs.map((para, i) => (
-            <p key={i}>{para}</p>
-          ))}
-        </motion.div>
+            <motion.p
+              className="mt-3 text-xl sm:text-2xl font-medium text-brand"
+              {...fadeUp(0.1)}
+            >
+              {introTitle}
+            </motion.p>
 
-        <motion.div
-          className="mt-8 flex flex-wrap items-center gap-4"
-          {...fadeUp(0.3)}
-        >
-          <a
-            href="/files/CV_Jingqi.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-2.5 rounded-full bg-brand text-white text-sm font-medium hover:bg-brand/90 transition-colors"
-          >
-            {t.downloadCv}
-          </a>
+            <motion.div
+              className="mt-6 max-w-2xl space-y-3 text-slate-600 leading-relaxed"
+              {...fadeUp(0.2)}
+            >
+              {paragraphs.map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </motion.div>
 
-          <div className="flex items-center gap-3">
-            {settings.social.map((item) => {
-              const Icon = iconMap[item.icon];
-              if (!Icon) return null;
-              return (
-                <a
-                  key={item.icon}
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={item.icon}
-                  className="text-slate-500 hover:text-brand transition-colors"
-                >
-                  <Icon />
-                </a>
-              );
-            })}
+            <motion.div
+              className="mt-8 flex flex-wrap items-center gap-4"
+              {...fadeUp(0.3)}
+            >
+              <a
+                href="/files/CV_Jingqi.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2.5 rounded-full bg-brand text-white text-sm font-medium hover:bg-brand/90 transition-colors"
+              >
+                {t.downloadCv}
+              </a>
+
+              <div className="flex items-center gap-3">
+                {settings.social.map((item) => {
+                  const Icon = iconMap[item.icon];
+                  if (!Icon) return null;
+                  return (
+                    <a
+                      key={item.icon}
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={item.icon}
+                      className="text-slate-500 hover:text-brand transition-colors"
+                    >
+                      <Icon />
+                    </a>
+                  );
+                })}
+              </div>
+            </motion.div>
           </div>
-        </motion.div>
+
+          {/* Photo */}
+          <motion.div
+            className="shrink-0"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+          >
+            <div className="w-40 h-40 sm:w-52 sm:h-52 rounded-full overflow-hidden ring-4 ring-brand/20 shadow-lg">
+              <Image
+                src="/images/Jingqi_Lu.png"
+                alt="Jingqi Lu"
+                width={208}
+                height={208}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   );
