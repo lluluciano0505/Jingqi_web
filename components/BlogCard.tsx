@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { Post } from "@/lib/types";
+import { useLocale } from "@/context/LocaleContext";
 
 function formatDate(dateStr: string): string {
   if (!dateStr) return "";
@@ -32,6 +33,9 @@ interface BlogCardProps {
 
 export default function BlogCard({ post, index }: BlogCardProps) {
   const imgSrc = thumbnailPath(post.slug);
+  const { locale } = useLocale();
+  const title = locale === "zh" && post.title_zh ? post.title_zh : post.title;
+  const summary = locale === "zh" && post.summary_zh ? post.summary_zh : post.summary;
 
   return (
     <motion.div
@@ -61,10 +65,10 @@ export default function BlogCard({ post, index }: BlogCardProps) {
         <div className="p-5">
           <p className="text-xs text-slate-400 mb-1">{formatDate(post.date)}</p>
           <h3 className="font-semibold text-slate-900 group-hover:text-brand transition-colors leading-snug">
-            {post.title}
+            {title}
           </h3>
-          {post.summary && (
-            <p className="mt-2 text-sm text-slate-500 line-clamp-2">{post.summary}</p>
+          {summary && (
+            <p className="mt-2 text-sm text-slate-500 line-clamp-4">{summary}</p>
           )}
         </div>
       </Link>

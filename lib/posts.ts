@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import type { Post } from "./types";
-import { markdownToHtml } from "./markdown";
+import { markdownToHtml, splitLocaleContent } from "./markdown";
 
 const postsDir = path.join(process.cwd(), "content/posts");
 
@@ -33,10 +33,13 @@ export function getAllPosts(): Post[] {
     return {
       slug,
       title: data.title ?? slug,
+      title_zh: data.title_zh ?? "",
       date: data.date ? String(data.date) : date,
       thumbnail: data.thumbnail ?? "",
       summary: data.description ?? data.summary ?? data.tagline ?? "",
+      summary_zh: data.summary_zh ?? "",
       content: "",
+      content_zh: "",
     };
   });
 
@@ -51,13 +54,17 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   const raw = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(raw);
   const date = dateFromFilename(filename);
+  const { en, zh } = splitLocaleContent(content);
 
   return {
     slug,
     title: data.title ?? slug,
+    title_zh: data.title_zh ?? "",
     date: data.date ? String(data.date) : date,
     thumbnail: data.thumbnail ?? "",
     summary: data.description ?? data.summary ?? data.tagline ?? "",
-    content: await markdownToHtml(content),
+    summary_zh: data.summary_zh ?? "",
+    content: await markdownToHtml(en),
+    content_zh: zh ? await markdownToHtml(zh) : "",
   };
 }

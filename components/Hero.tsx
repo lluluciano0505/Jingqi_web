@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import type { SiteSettings } from "@/lib/types";
+import { useLocale } from "@/context/LocaleContext";
+import { translations } from "@/lib/translations";
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 20 },
@@ -44,16 +46,26 @@ interface HeroProps {
 }
 
 export default function Hero({ settings }: HeroProps) {
-  const paragraphs = settings.intro_text
+  const { locale } = useLocale();
+  const t = translations[locale].hero;
+
+  const introTitle =
+    locale === "zh" && settings.intro_title_zh
+      ? settings.intro_title_zh
+      : settings.intro_title;
+
+  const introText =
+    locale === "zh" && settings.intro_text_zh
+      ? settings.intro_text_zh
+      : settings.intro_text;
+
+  const paragraphs = introText
     .split(/\n\n+/)
     .map((p) => p.trim())
     .filter(Boolean);
 
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center pt-16"
-    >
+    <section id="home" className="min-h-screen flex items-center pt-16">
       <div className="max-w-5xl mx-auto px-6 py-24">
         <motion.h1
           className="text-5xl sm:text-6xl font-bold text-slate-900 leading-tight"
@@ -66,7 +78,7 @@ export default function Hero({ settings }: HeroProps) {
           className="mt-3 text-xl sm:text-2xl font-medium text-brand"
           {...fadeUp(0.1)}
         >
-          {settings.intro_title}
+          {introTitle}
         </motion.p>
 
         <motion.div
@@ -88,7 +100,7 @@ export default function Hero({ settings }: HeroProps) {
             rel="noopener noreferrer"
             className="px-6 py-2.5 rounded-full bg-brand text-white text-sm font-medium hover:bg-brand/90 transition-colors"
           >
-            Download CV
+            {t.downloadCv}
           </a>
 
           <div className="flex items-center gap-3">

@@ -5,6 +5,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import ExperienceTimeline from "./ExperienceTimeline";
 import type { ExperienceEntry } from "@/lib/types";
+import { useLocale } from "@/context/LocaleContext";
+import { translations } from "@/lib/translations";
 
 const ExperienceMap = dynamic(() => import("./ExperienceMap"), { ssr: false });
 
@@ -19,12 +21,14 @@ export default function ExperienceSection({
 }: ExperienceSectionProps) {
   const [activeId, setActiveId] = useState<string | null>(null);
   const allEntries = [...education, ...experience];
+  const { locale } = useLocale();
+  const t = translations[locale].sections.experience;
 
   return (
     <section id="experience" className="py-24 bg-slate-50">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-slate-900 mb-2">Experience</h2>
-        <p className="text-slate-500 mb-10">Education and professional journey.</p>
+        <h2 className="text-3xl font-bold text-slate-900 mb-2">{t.title}</h2>
+        <p className="text-slate-500 mb-10">{t.subtitle}</p>
 
         <motion.div
           initial={{ opacity: 0 }}

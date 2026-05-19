@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getAllProjects, getProjectBySlug } from "@/lib/projects";
 import { notFound } from "next/navigation";
+import { LocaleText, LocaleHtml } from "@/components/LocaleText";
 
 export async function generateStaticParams() {
   const projects = getAllProjects();
@@ -13,7 +14,6 @@ function thumbnailPath(slug: string): string {
   if (slug === "proj-7") return `/images/projects/${slug}/proj_7.png`;
   return `/images/projects/${slug}/thumbnail.png`;
 }
-
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -48,10 +48,12 @@ export default async function ProjectPage({ params }: Props) {
         </div>
 
         <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 leading-snug">
-          {project.title}
+          <LocaleText en={project.title} zh={project.title_zh} />
         </h1>
 
-        <p className="mt-3 text-lg text-slate-500">{project.tagline}</p>
+        <p className="mt-3 text-lg text-slate-500">
+          <LocaleText en={project.tagline} zh={project.tagline_zh} />
+        </p>
 
         <div className="mt-4 flex flex-wrap gap-2">
           {project.skills.map((skill) => (
@@ -64,9 +66,10 @@ export default async function ProjectPage({ params }: Props) {
           ))}
         </div>
 
-        <article
+        <LocaleHtml
+          en={project.content}
+          zh={project.content_zh}
           className="mt-10 prose prose-slate max-w-none"
-          dangerouslySetInnerHTML={{ __html: project.content }}
         />
       </div>
     </main>

@@ -4,12 +4,19 @@
 logo: '/assets/img/musa-logo.png'
 
 intro_title: AI & Geospatial ML Engineer
+intro_title_zh: AI 与地理空间机器学习工程师
 intro_text: |
   I build AI agent systems and LLM-powered pipelines that turn unstructured data into structured, queryable knowledge.
 
   Currently leading an AI agent–based data classification system at Henning Larsen, integrating multiple LLMs and VLMs via OpenRouter to automate semantic parsing of large-scale architectural project files. Also building AI-driven urban event databases at UPenn using automated scraping agents.
 
   Skilled in Python, LLM/VLM integration, agentic modeling, deep learning (CNN, Mask R-CNN, U-Net), and geospatial engineering. Open to AI/ML engineering roles in urban tech, data infrastructure, or applied AI.
+intro_text_zh: |
+  我构建 AI 智能体系统和由 LLM 驱动的流水线，将非结构化数据转化为结构化、可查询的知识。
+
+  目前在 Henning Larsen 主导基于 AI 智能体的数据分类系统，通过 OpenRouter 集成多种 LLM 和 VLM，自动化解析大规模建筑项目文件的语义信息。同时在宾夕法尼亚大学使用自动化爬取智能体构建 AI 驱动的城市事件数据库。
+
+  擅长 Python、LLM/VLM 集成、智能体建模、深度学习（CNN、Mask R-CNN、U-Net）及地理空间工程。欢迎城市科技、数据基础设施或应用 AI 方向的 AI/ML 工程职位。
   
 resume: '/resume'
 resume_link_title: View CV

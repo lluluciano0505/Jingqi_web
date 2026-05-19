@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Who Gets a Place After Dark? Straightwashing and the Loss of Lesbian Space in Philadelphia's Gayborhood"
+title_zh: "夜幕降临，谁有权留下？——费城同志街区女同性恋空间的消失"
+summary_zh: "案例研究：费城最后一家女同酒吧的关闭，以及中产阶级化、经济脆弱性与社会规范变迁的交织。"
 ---
 
 *Case study written for MUSA 5080: Public Policy Analytics, University of Pennsylvania.*

@@ -2,16 +2,21 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-
-const navLinks = [
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#blog", label: "Blog" },
-];
+import LangToggle from "./LangToggle";
+import { useLocale } from "@/context/LocaleContext";
+import { translations } from "@/lib/translations";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { locale } = useLocale();
+  const t = translations[locale].nav;
+
+  const navLinks = [
+    { href: "#projects", label: t.projects },
+    { href: "#experience", label: t.experience },
+    { href: "#blog", label: t.blog },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -32,7 +37,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -48,32 +53,36 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="text-sm px-4 py-1.5 rounded-full border border-brand text-brand hover:bg-brand hover:text-white transition-colors"
           >
-            CV
+            {t.cv}
           </a>
+          <LangToggle />
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setMenuOpen((o) => !o)}
-          aria-label="Toggle menu"
-        >
-          <span
-            className={`block w-5 h-0.5 bg-slate-700 transition-transform duration-200 ${
-              menuOpen ? "translate-y-2 rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`block w-5 h-0.5 bg-slate-700 transition-opacity duration-200 ${
-              menuOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`block w-5 h-0.5 bg-slate-700 transition-transform duration-200 ${
-              menuOpen ? "-translate-y-2 -rotate-45" : ""
-            }`}
-          />
-        </button>
+        {/* Mobile: lang toggle + hamburger */}
+        <div className="md:hidden flex items-center gap-3">
+          <LangToggle />
+          <button
+            className="flex flex-col gap-1.5 p-2"
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-label={t.toggleMenu}
+          >
+            <span
+              className={`block w-5 h-0.5 bg-slate-700 transition-transform duration-200 ${
+                menuOpen ? "translate-y-2 rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`block w-5 h-0.5 bg-slate-700 transition-opacity duration-200 ${
+                menuOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`block w-5 h-0.5 bg-slate-700 transition-transform duration-200 ${
+                menuOpen ? "-translate-y-2 -rotate-45" : ""
+              }`}
+            />
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
@@ -95,7 +104,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="text-sm text-brand font-medium"
           >
-            Download CV
+            {t.downloadCv}
           </a>
         </div>
       )}

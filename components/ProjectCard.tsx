@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { Project } from "@/lib/types";
+import { useLocale } from "@/context/LocaleContext";
 
 function thumbnailPath(slug: string): string {
   if (slug === "proj-5") return `/images/projects/${slug}/DataTaxonomy.png`;
@@ -19,6 +20,9 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   const imgSrc = thumbnailPath(project.slug);
+  const { locale } = useLocale();
+  const title = locale === "zh" && project.title_zh ? project.title_zh : project.title;
+  const tagline = locale === "zh" && project.tagline_zh ? project.tagline_zh : project.tagline;
 
   return (
     <motion.div
@@ -46,10 +50,10 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         {/* Content */}
         <div className="p-5">
           <h3 className="font-semibold text-slate-900 group-hover:text-brand transition-colors leading-snug">
-            {project.title}
+            {title}
           </h3>
-          <p className="mt-1.5 text-sm text-slate-500 line-clamp-2">
-            {project.tagline}
+          <p className="mt-1.5 text-sm text-slate-500 line-clamp-4">
+            {tagline}
           </p>
 
           {/* Skill tags */}

@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import type { ExperienceEntry } from "@/lib/types";
+import { useLocale } from "@/context/LocaleContext";
+import { translations } from "@/lib/translations";
 
 function makeId(e: ExperienceEntry) {
   return `${e.institution}-${e.period}`;
@@ -17,6 +19,8 @@ interface TimelineEntryProps {
 function TimelineEntry({ entry, isActive, index }: TimelineEntryProps) {
   const [expanded, setExpanded] = useState(false);
   const id = makeId(entry);
+  const { locale } = useLocale();
+  const t = translations[locale].sections.experience;
 
   return (
     <motion.div
@@ -47,7 +51,7 @@ function TimelineEntry({ entry, isActive, index }: TimelineEntryProps) {
           onClick={() => setExpanded((e) => !e)}
           className="mt-2 text-xs text-brand hover:underline"
         >
-          {expanded ? "Show less ↑" : "Show details ↓"}
+          {expanded ? t.showLess : t.showDetails}
         </button>
       )}
 
@@ -90,6 +94,8 @@ export default function ExperienceTimeline({
   activeId,
 }: ExperienceTimelineProps) {
   const activeRef = useRef<string | null>(null);
+  const { locale } = useLocale();
+  const t = translations[locale].sections.experience;
 
   useEffect(() => {
     if (activeId && activeId !== activeRef.current) {
@@ -102,7 +108,7 @@ export default function ExperienceTimeline({
   return (
     <div className="space-y-10">
       <div>
-        <h3 className="text-lg font-semibold text-slate-700 mb-4">Education</h3>
+        <h3 className="text-lg font-semibold text-slate-700 mb-4">{t.education}</h3>
         <div className="space-y-4">
           {education.map((e, i) => (
             <TimelineEntry
@@ -116,7 +122,7 @@ export default function ExperienceTimeline({
       </div>
 
       <div>
-        <h3 className="text-lg font-semibold text-slate-700 mb-4">Experience</h3>
+        <h3 className="text-lg font-semibold text-slate-700 mb-4">{t.work}</h3>
         <div className="space-y-4">
           {experience.map((e, i) => (
             <TimelineEntry

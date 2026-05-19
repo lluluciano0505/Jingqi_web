@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { notFound } from "next/navigation";
+import { LocaleText, LocaleHtml } from "@/components/LocaleText";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -57,12 +58,13 @@ export default async function PostPage({ params }: Props) {
 
         <p className="text-sm text-slate-400 mb-2">{formatDate(post.date)}</p>
         <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 leading-snug">
-          {post.title}
+          <LocaleText en={post.title} zh={post.title_zh} />
         </h1>
 
-        <article
+        <LocaleHtml
+          en={post.content}
+          zh={post.content_zh}
           className="mt-8 prose prose-slate max-w-none"
-          dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </div>
     </main>

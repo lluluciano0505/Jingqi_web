@@ -11,7 +11,9 @@ export function getSettings(): SiteSettings {
 
   return {
     intro_title: (data.intro_title as string) ?? "",
+    intro_title_zh: (data.intro_title_zh as string) ?? "",
     intro_text: (data.intro_text as string) ?? "",
+    intro_text_zh: (data.intro_text_zh as string) ?? "",
     social: (data.social as SiteSettings["social"]) ?? [],
     resume: (data.resume as string) ?? "",
   };
