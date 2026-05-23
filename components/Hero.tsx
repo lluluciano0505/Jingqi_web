@@ -76,7 +76,7 @@ export default function Hero({ settings }: HeroProps) {
               className="text-5xl sm:text-6xl font-bold text-slate-900 leading-tight"
               {...fadeUp(0)}
             >
-              Jingqi Lu
+              {locale === "zh" ? "卢璟琦" : "Jingqi Lu"}
             </motion.h1>
 
             <motion.p
