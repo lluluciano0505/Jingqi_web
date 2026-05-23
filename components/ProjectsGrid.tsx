@@ -26,14 +26,15 @@ export default function ProjectsGrid({ projects }: ProjectsGridProps) {
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-slate-900 mb-12">{t.title}</h2>
 
-        <div className="space-y-16">
+        <div className="space-y-10">
           {grouped.map(({ key, label, items }) => (
             <div key={key}>
-              <h3 className="text-lg font-semibold text-brand mb-6 flex items-center gap-3">
+              <h3 className="text-lg font-semibold text-brand mb-4 flex items-center gap-3">
                 {label}
+                <span className="text-xs font-normal text-slate-400">{items.length}</span>
                 <span className="h-px flex-1 bg-brand/20" />
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 {items.map((project, i) => (
                   <ProjectCard key={project.slug} project={project} index={i} />
                 ))}
