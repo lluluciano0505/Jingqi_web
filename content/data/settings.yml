@@ -12,11 +12,27 @@ intro_text: |
 
   Skilled in Python, LLM/VLM integration, agentic modeling, deep learning (CNN, Mask R-CNN, U-Net), and geospatial engineering. Open to AI/ML engineering roles in urban tech, data infrastructure, or applied AI.
 intro_text_zh: |
-  我是 AI 和地理空间机器学习工程师。研究兴趣是人类移动性与轨迹建模，以及数据信息在城市规划中的应用。
+  本人为AI与地理空间机器学习方向工程师，深耕人工智能赋能下的人类移动性分析、时空轨迹建模，专注空间数据挖掘技术在智慧城市、城市规划领域的落地应用。
 
-  目前在帮 Henning Larsen 设计数据分类系统，通过 LLM 和 VLM 自动解析大型建筑项目文件的语义；同时在宾夕法尼亚大学用智能体构建城市活动数据库。
+  核心项目经历
 
-  技术栈：Python、LLM/VLM 集成、智能体架构、深度学习（CNN、Mask R-CNN、U-Net）、地理空间工程。在找城市科技、数据基础设施或应用 AI 方向的 AI/ML 工程岗。
+  1. 建筑设计数据智能分类系统研发
+  任职期间搭建Henning Larsen建筑设计数据分类体系，基于大语言模型（LLM）与视觉大模型（VLM），实现大型建筑工程项目文档的自动化语义解析、信息提取与结构化归类，赋能建筑设计行业数字化、智能化升级。
+
+  2. 城市智能体与时空数据库建设
+  依托宾夕法尼亚大学研究平台，自主构建城市仿真智能体架构，系统性搭建标准化城市活动时空数据库，为城市动态模拟、空间行为预测、智慧规划研究提供核心数据底座与算法支撑。
+
+  核心技术栈
+
+  • 编程语言：Python
+  • 大模型技术：LLM、VLM多模态模型集成与工程落地
+  • 算法架构：AI智能体架构设计、深度学习模型研发
+  • 视觉/遥感模型：CNN、Mask R-CNN、U-Net
+  • 工程方向：地理空间数据处理、时空数据工程、城市数据基建
+
+  求职意向
+
+  聚焦城市科技、数据基础设施、行业应用AI赛道，应聘AI/机器学习工程师岗位，可独立完成模型研发、多模态技术落地、地理空间数据工程搭建等相关工作。
   
 resume: '/resume'
 resume_link_title: View CV
