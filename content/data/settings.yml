@@ -6,15 +6,15 @@ logo: '/assets/img/musa-logo.png'
 intro_title: AI & Geospatial ML Engineer
 intro_title_zh: AI 与地理空间机器学习工程师
 intro_text: |
-  I build AI agent systems and LLM-powered pipelines that turn unstructured data into structured, queryable knowledge.
+  I'm an AI and geospatial ML engineer. My research interests are human mobility & trajectory modeling, and the application of data and information in urban planning.
 
-  Currently leading an AI agent–based data classification system at Henning Larsen, integrating multiple LLMs and VLMs via OpenRouter to automate semantic parsing of large-scale architectural project files. Also building AI-driven urban event databases at UPenn using automated scraping agents.
+  Currently designing a data classification system for Henning Larsen — using LLMs and VLMs to automatically parse the semantics of large-scale architectural project files. Also building an AI agent at UPenn to create an urban events database.
 
   Skilled in Python, LLM/VLM integration, agentic modeling, deep learning (CNN, Mask R-CNN, U-Net), and geospatial engineering. Open to AI/ML engineering roles in urban tech, data infrastructure, or applied AI.
 intro_text_zh: |
-  我做的事情核心是一件：让 AI 读懂非结构化数据。搭智能体系统、写 LLM 管线，把杂乱的文件、网页、坐标变成结构化、可查询的东西。
+  我是 AI 和地理空间机器学习工程师。研究兴趣是人类移动性与轨迹建模，以及数据信息在城市规划中的应用。
 
-  最近在 Henning Larsen 主导一套文档分类系统——跑多路 LLM 和 VLM，自动解析大型建筑项目文件的语义；同时在宾大用爬虫智能体给城市活动建数据库。
+  目前在帮 Henning Larsen 设计数据分类系统，通过 LLM 和 VLM 自动解析大型建筑项目文件的语义；同时在宾夕法尼亚大学用智能体构建城市活动数据库。
 
   技术栈：Python、LLM/VLM 集成、智能体架构、深度学习（CNN、Mask R-CNN、U-Net）、地理空间工程。在找城市科技、数据基础设施或应用 AI 方向的 AI/ML 工程岗。
   
