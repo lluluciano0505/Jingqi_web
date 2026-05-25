@@ -9,42 +9,56 @@ group: AI
 skills: [LangGraph, Claude API, GPT-4o-mini, FastAPI, SQLite, React, OpenStreetMap]
 ---
 
-UrbanRhythm is a multi-agent AI pipeline that autonomously discovers, scrapes, judges, and semantically indexes cultural events across any US city. A Philadelphia case study indexed **253 events from 40+ venues** — libraries, museums, and galleries — without any hardcoded scraping logic.
+UrbanRhythm is a multi-agent AI pipeline that autonomously discovers, scrapes, judges, and semantically indexes cultural events across any US city. A Philadelphia case study indexed **253 events from 40+ venues** — libraries, museums, and galleries — at a cost of ~$0.75 per city run, with no hardcoded scraping logic.
 
-**Agent Pipeline**
+**Architecture**
 
-The system runs on a LangGraph orchestration layer with a ReAct agent pattern:
+The system runs on a LangGraph StateGraph DAG with a Send API for parallel fan-out, processing up to 8 venues simultaneously.
 
-**Stage 1 — Venue Discovery:** OpenStreetMap Overpass API identifies cultural venues by type and geography, returning structured venue metadata.
+**Agent 1 — City Resolver:** Converts free-text city input ("Austin TX") into structured coordinates via Nominatim, selecting the most populous match for ambiguous names.
 
-**Stage 2 — Parallel Event Extraction:** Each venue is processed in parallel fan-out. An iCal → JSON-LD → LLM extraction pipeline converts any event format into structured data. Claude 3.5 Sonnet and GPT-4o-mini handle extraction and evaluation tasks.
+**Agent 2 — Venue Discovery:** Queries OpenStreetMap Overpass API within a 30km radius to return libraries, museums, galleries, and arts centres — with name, address, website URL, OSM ID, and venue type. An Austin TX run returned 87 venues.
 
-**Stage 3 — AI Judge:** A scoring agent evaluates each scraped event for quality and relevance, accepting or flagging entries before they enter the archive.
+**Agent 3 — Scraper (3-Path ReAct):** Each venue runs through a cost-prioritized cascade:
+- *Path A (Fast / GPT-4o-mini):* 8-tool ReAct loop — tries iCal feed detection, JSON-LD extraction, `/events` path navigation, and Jina Reader HTML-to-markdown before falling back. 30s timeout, 3–5s processing. 60–70% success rate.
+- *Path B (Thorough):* Triggered when Path A finds fewer than 3 events. A 3-step sequential pipeline — Navigator reads the homepage and produces a `SiteProfile` (CMS type, depth, 5 candidate event links); Strategy Agent ranks targets; Extractor runs 3 parallel mini-ReAct workers with 4-call limits each. 90s timeout, 8–15s, 80–90% success rate.
+- *Path C (Web Search / Tavily):* Fallback when both paths fail. 95%+ success rate, 5–10s.
 
-**Stage 4 — Semantic Index:** Accepted events are stored in SQLite via FastAPI and surfaced in a React/Vite dashboard — filterable by date, grouped by venue, and fully searchable.
+**Agent 4 — Playbook Store:** A cross-run SQLite memory system keyed by domain. Records successful extraction strategy, CMS type, success/failure counts, and timestamps. On repeat runs, venue scraping skips trial-and-error by looking up known strategies — exact domain match → CMS pattern match → default fallback.
+
+**Agent 5 — Judge:** Rule-based scoring applied to every event: valid future date (+0.35), meaningful title (+0.25), location info (+0.20), description or URL (+0.20). Score ≥ 0.65 → accept; 0.40–0.64 → escalated to Claude 3.5 Sonnet for final verdict; < 0.40 → reject. Roughly 50 borderline events per city run reach Sonnet, reducing inference cost ~4×.
+
+**Agent 6 — Knowledge Graph:** Post-processing semantic layer. Generates weighted venue tags (jazz, children, film, history), extracts entity names (artists, exhibition titles, recurring series), and computes venue-to-venue cosine similarity scores for recommendation.
 
 [View Live Project →](https://lluluciano0505.github.io/UrbanRhythm/)
 [View on GitHub →](https://github.com/lluluciano0505/UrbanRhythm)
 
-**Tools:** LangGraph · Claude 3.5 Sonnet · GPT-4o-mini · OpenStreetMap · FastAPI · SQLite · React · Vite
+**Tools:** LangGraph · Claude 3.5 Sonnet · GPT-4o-mini · OpenStreetMap · Jina Reader · Tavily · FastAPI · SQLite · React · Vite
 
 <!-- zh -->
 
-UrbanRhythm 是一套多智能体 AI 管线，可自主发现、抓取、评判并语义索引任意美国城市的文化活动。以费城为案例，系统覆盖图书馆、博物馆、艺廊等 **40余家场馆，共索引253项活动**，全程无需任何硬编码抓取逻辑。
+UrbanRhythm 是一套多智能体 AI 管线，可自主发现、抓取、评判并语义索引任意美国城市的文化活动。以费城为案例，系统覆盖图书馆、博物馆、艺廊等 **40余家场馆，共索引253项活动**，每次城市运行成本约 $0.75，全程无需任何硬编码抓取逻辑。
 
-**智能体管线**
+**系统架构**
 
-系统基于 LangGraph 编排层，采用 ReAct 智能体模式：
+系统基于 LangGraph StateGraph DAG，通过 Send API 实现并行扇出，最多同时处理8个场馆。
 
-**第一阶段 — 场馆发现：** 通过 OpenStreetMap Overpass API 按类型与地理位置识别文化场馆，返回结构化场馆元数据。
+**智能体 1 — 城市解析器：** 将自由文本输入（如 "Austin TX"）通过 Nominatim 转化为结构化坐标，模糊地名取人口最多的匹配项。
 
-**第二阶段 — 并行活动抽取：** 对所有场馆并行扇出处理。iCal → JSON-LD → LLM 抽取管线将任意活动格式转化为结构化数据；Claude 3.5 Sonnet 与 GPT-4o-mini 分别负责抽取与评估任务。
+**智能体 2 — 场馆发现：** 在30km半径内查询 OpenStreetMap Overpass API，返回图书馆、博物馆、艺廊和艺术中心的名称、地址、网站URL、OSM ID 和场馆类型。Austin TX 案例共发现87家场馆。
 
-**第三阶段 — AI 裁判：** 评分智能体对每条抓取结果进行质量与相关性评判，合格后方可进入归档库。
+**智能体 3 — 抓取器（三路 ReAct）：** 每个场馆按成本优先顺序依次尝试三条路径：
+- *路径 A（快速 / GPT-4o-mini）：* 8工具 ReAct 循环——依次尝试 iCal 订阅源检测、JSON-LD 抽取、`/events` 路径导航，再通过 Jina Reader 将 HTML 转为 Markdown 处理。超时30秒，耗时3–5秒，成功率60–70%。
+- *路径 B（精细抓取）：* 当路径A找到不足3个活动时触发。三步顺序管线——Navigator 读取主页并生成 `SiteProfile`（CMS类型、页面深度、5个候选活动链接）；Strategy Agent 对目标链接排序；Extractor 用3个并行mini-ReAct worker（每个最多4次调用）执行抽取。超时90秒，耗时8–15秒，成功率80–90%。
+- *路径 C（网页搜索 / Tavily）：* 两路均失败时的兜底方案。成功率95%以上，耗时5–10秒。
 
-**第四阶段 — 语义索引：** 通过 FastAPI 写入 SQLite，并在 React/Vite 仪表板中呈现——支持按日期筛选、按场馆分组与全文检索。
+**智能体 4 — Playbook 记忆库：** 以域名为键的跨次运行 SQLite 记忆系统。记录每个场馆成功的抓取策略、CMS类型、成/失败次数及时间戳。重复运行时直接查表跳过试错——精确域名匹配 → CMS模式匹配 → 默认回退，大幅降低重复成本。
+
+**智能体 5 — 裁判：** 对每条活动进行规则评分：有效未来日期（+0.35）、有意义的标题（+0.25）、包含地点信息（+0.20）、有描述或链接（+0.20）。得分 ≥ 0.65 → 接受；0.40–0.64 → 升级至 Claude 3.5 Sonnet 裁定；< 0.40 → 拒绝。每次城市运行约50条边界活动会进入 Sonnet，推理成本降低约4倍。
+
+**智能体 6 — 知识图谱：** 后处理语义层。生成加权场馆标签（爵士、儿童、电影、历史），提取实体名称（艺术家、展览标题、常设系列），并基于余弦相似度计算场馆间相似度评分，用于推荐。
 
 [查看线上项目 →](https://lluluciano0505.github.io/UrbanRhythm/)
 [在 GitHub 上查看 →](https://github.com/lluluciano0505/UrbanRhythm)
 
-**工具：** LangGraph · Claude 3.5 Sonnet · GPT-4o-mini · OpenStreetMap · FastAPI · SQLite · React · Vite
+**工具：** LangGraph · Claude 3.5 Sonnet · GPT-4o-mini · OpenStreetMap · Jina Reader · Tavily · FastAPI · SQLite · React · Vite
