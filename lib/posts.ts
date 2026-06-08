@@ -40,10 +40,13 @@ export function getAllPosts(): Post[] {
       summary_zh: data.summary_zh ?? "",
       content: "",
       content_zh: "",
+      hidden: data.hidden === true,
     };
   });
 
-  return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+  return posts
+    .filter((p) => !(p as Post & { hidden?: boolean }).hidden)
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
