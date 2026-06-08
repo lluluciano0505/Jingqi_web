@@ -6,33 +6,19 @@ logo: '/assets/img/musa-logo.png'
 intro_title: AI & Geospatial ML Engineer
 intro_title_zh: AI 与地理空间机器学习工程师
 intro_text: |
-  I'm an AI and geospatial ML engineer. My research interests are human mobility & trajectory modeling, and the application of data and information in urban planning.
+  My background is in geography and urban systems. Over time I became convinced that cities don't lack data — they lack the infrastructure to turn it into something usable.
 
-  Currently designing a data classification system for Henning Larsen — using LLMs and VLMs to automatically parse the semantics of large-scale architectural project files. Also building an AI agent at UPenn to create an urban events database.
+  That's what brought me to MUSA at UPenn, and what drives the work I build: agent pipelines and LLM systems that transform unstructured documents, event pages, and spatial traces into structured, queryable knowledge for urban decision-making.
 
-  Skilled in Python, LLM/VLM integration, agentic modeling, deep learning (CNN, Mask R-CNN, U-Net), and geospatial engineering. Open to AI/ML engineering roles in urban tech, data infrastructure, or applied AI.
+  Currently building a document intelligence system at Henning Larsen and an urban events database at UPenn. Looking for roles at the intersection of AI systems and smart city infrastructure.
 intro_text_zh: |
-  本人为AI与地理空间机器学习方向工程师，深耕人工智能赋能下的人类移动性分析、时空轨迹建模，专注空间数据挖掘技术在智慧城市、城市规划领域的落地应用。
+  我的本科背景是地理学与社会数据科学。在城市研究的过程中，我逐渐意识到：困扰城市决策的从来不是数据的匮乏，而是信息的混乱——大量有价值的文件、记录、轨迹数据散落各处，却难以被有效整合和利用。
 
-  核心项目经历
+  这个判断促使我选择在宾夕法尼亚大学攻读城市空间分析硕士（MUSA），研究方向聚焦于如何以 AI 作为生产力工具，将非结构化的城市信息转化为可查询、可支撑决策的结构化知识。
 
-  1. 建筑设计数据智能分类系统研发
-  任职期间搭建Henning Larsen建筑设计数据分类体系，基于大语言模型（LLM）与视觉大模型（VLM），实现大型建筑工程项目文档的自动化语义解析、信息提取与结构化归类，赋能建筑设计行业数字化、智能化升级。
+  目前正在 Henning Larsen 主导建筑文档智能分类系统的研发，并在宾大构建城市活动时空数据库——两个项目的核心逻辑一致：用 LLM 管线和智能体架构，让散乱的信息变得可用。
 
-  2. 城市智能体与时空数据库建设
-  依托宾夕法尼亚大学研究平台，自主构建城市仿真智能体架构，系统性搭建标准化城市活动时空数据库，为城市动态模拟、空间行为预测、智慧规划研究提供核心数据底座与算法支撑。
-
-  核心技术栈
-
-  • 编程语言：Python
-  • 大模型技术：LLM、VLM多模态模型集成与工程落地
-  • 算法架构：AI智能体架构设计、深度学习模型研发
-  • 视觉/遥感模型：CNN、Mask R-CNN、U-Net
-  • 工程方向：地理空间数据处理、时空数据工程、城市数据基建
-
-  求职意向
-
-  聚焦城市科技、数据基础设施、行业应用AI赛道，应聘AI/机器学习工程师岗位，可独立完成模型研发、多模态技术落地、地理空间数据工程搭建等相关工作。
+  技术方向涵盖 Python、LLM/VLM 集成、AI 智能体架构、深度学习（CNN、Mask R-CNN、U-Net）及地理空间数据工程。专注智慧城市、数据基础设施与应用 AI 方向。
   
 resume: '/resume'
 resume_link_title: View CV
