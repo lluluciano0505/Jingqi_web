@@ -38,7 +38,7 @@ export default async function PostPage({ params }: Props) {
   const post = await getPostBySlug(slug);
   if (!post) notFound();
 
-  const imgSrc = thumbnailPath(slug);
+  const imgSrc = post.thumbnail || thumbnailPath(slug);
 
   return (
     <main className="min-h-screen pt-20 pb-24">
