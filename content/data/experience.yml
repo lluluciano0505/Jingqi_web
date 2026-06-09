@@ -134,6 +134,7 @@
 
 - city: Qingdao
   region: China
+  hidden: true
   institution: Hisense Cold Chain
   institution_zh: 海信冷链
   role: Sales Assistant

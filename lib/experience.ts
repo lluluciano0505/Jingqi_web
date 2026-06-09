@@ -14,7 +14,7 @@ export function getExperienceBySection(): {
   education: ExperienceEntry[];
   experience: ExperienceEntry[];
 } {
-  const all = getExperience();
+  const all = getExperience().filter((e) => !(e as ExperienceEntry & { hidden?: boolean }).hidden);
   return {
     education: all.filter((e) => e.section === "Education"),
     experience: all.filter((e) => e.section === "Experience"),
