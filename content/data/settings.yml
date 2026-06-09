@@ -6,11 +6,13 @@ logo: '/assets/img/musa-logo.png'
 intro_title: AI & Geospatial ML Engineer
 intro_title_zh: AI 与地理空间机器学习工程师
 intro_text: |
-  My background is in geography and urban systems. Over time I became convinced that cities don't lack data — they lack the infrastructure to turn it into something usable.
+  My background is in geography and social data science. Through urban research, I came to a conviction: cities don't suffer from a lack of data — they suffer from fragmentation. Valuable documents, records, and spatial traces exist everywhere, but rarely in a form that can actually inform decisions.
 
-  That's what brought me to MUSA at UPenn, and what drives the work I build: agent pipelines and LLM systems that transform unstructured documents, event pages, and spatial traces into structured, queryable knowledge for urban decision-making.
+  That's what brought me to the M.S. in Urban Spatial Analytics (MUSA) at UPenn — to work at the intersection of AI and urban systems, and to build tools that turn unstructured urban information into structured, queryable knowledge.
 
-  Currently building a document intelligence system at Henning Larsen and an urban events database at UPenn. Looking for roles at the intersection of AI systems and smart city infrastructure.
+  Currently leading a document intelligence system at Henning Larsen — using LLM and VLM pipelines to automatically parse large-scale architectural project files. Also building an urban events database at UPenn with AI agents. Both projects share the same core logic: make messy information usable.
+
+  Technical focus: Python, LLM/VLM integration, agentic systems, deep learning (CNN, Mask R-CNN, U-Net), and geospatial data engineering. Interested in smart city, data infrastructure, and applied AI roles.
 intro_text_zh: |
   我的本科背景是地理学与社会数据科学。在城市研究的过程中，我逐渐意识到：困扰城市决策的从来不是数据的匮乏，而是信息的混乱——大量有价值的文件、记录、轨迹数据散落各处，却难以被有效整合和利用。
 
