@@ -3,8 +3,8 @@
 
 logo: '/assets/img/musa-logo.png'
 
-intro_title: AI & Geospatial ML Engineer
-intro_title_zh: AI 与地理空间机器学习工程师
+intro_title: Urban Data & AI Engineer
+intro_title_zh: 城市数据与 AI 工程师
 intro_text: |
   My background is in geography and social data science. Through urban research, I came to a conviction: cities don't suffer from a lack of data — they suffer from fragmentation. Valuable documents, records, and spatial traces exist everywhere, but rarely in a form that can actually inform decisions.
 
@@ -12,7 +12,7 @@ intro_text: |
 
   Currently leading a document intelligence system at Henning Larsen — using LLM and VLM pipelines to automatically parse large-scale architectural project files. Also building an urban events database at UPenn with AI agents. Both projects share the same core logic: make messy information usable.
 
-  Technical focus: Python, LLM/VLM integration, agentic systems, deep learning (CNN, Mask R-CNN, U-Net), and geospatial data engineering. Interested in smart city, data infrastructure, and applied AI roles.
+  Technical focus: Python, data pipelines, geospatial data engineering, machine learning, LLM/VLM integration, and agentic systems. Interested in data infrastructure, urban analytics, and applied AI roles.
 intro_text_zh: |
   我的本科背景是地理学与社会数据科学。在城市研究的过程中，我逐渐意识到：困扰城市决策的从来不是数据的匮乏，而是信息的混乱——大量有价值的文件、记录、轨迹数据散落各处，却难以被有效整合和利用。
 
@@ -20,7 +20,7 @@ intro_text_zh: |
 
   目前正在 Henning Larsen 主导建筑文档智能分类系统的研发，并在宾大构建城市活动时空数据库——两个项目的核心逻辑一致：用 LLM 管线和智能体架构，让散乱的信息变得可用。
 
-  技术方向涵盖 Python、LLM/VLM 集成、AI 智能体架构、深度学习（CNN、Mask R-CNN、U-Net）及地理空间数据工程。专注智慧城市、数据基础设施与应用 AI 方向。
+  技术方向涵盖 Python、数据管道、地理空间数据工程、机器学习、LLM/VLM 集成与 AI 智能体架构。专注数据基础设施、城市数据分析与应用 AI 方向。
   
 resume: '/resume'
 resume_link_title: View CV
