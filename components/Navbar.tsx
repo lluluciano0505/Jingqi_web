@@ -48,7 +48,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/files/CV_Jingqi.pdf"
+            href={locale === "zh" ? "/files/CV_Jingqi_zh.pdf" : "/files/CV_Jingqi.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm px-4 py-1.5 rounded-full border border-brand text-brand hover:bg-brand hover:text-white transition-colors"
@@ -99,7 +99,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/files/CV_Jingqi.pdf"
+            href={locale === "zh" ? "/files/CV_Jingqi_zh.pdf" : "/files/CV_Jingqi.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-brand font-medium"

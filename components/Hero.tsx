@@ -100,7 +100,7 @@ export default function Hero({ settings }: HeroProps) {
               {...fadeUp(0.3)}
             >
               <a
-                href="/files/CV_Jingqi.pdf"
+                href={locale === "zh" ? "/files/CV_Jingqi_zh.pdf" : "/files/CV_Jingqi.pdf"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2.5 rounded-full bg-brand text-white text-sm font-medium hover:bg-brand/90 transition-colors"
@@ -138,7 +138,7 @@ export default function Hero({ settings }: HeroProps) {
           >
             <div className="w-40 h-40 sm:w-52 sm:h-52 rounded-full overflow-hidden ring-4 ring-brand/20 shadow-lg">
               <Image
-                src="/images/Jingqi_Lu.png"
+                src="/images/Jingqi_pic.jpg"
                 alt="Jingqi Lu"
                 width={208}
                 height={208}
