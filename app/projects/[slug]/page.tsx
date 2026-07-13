@@ -55,6 +55,24 @@ export default async function ProjectPage({ params }: Props) {
           <LocaleText en={project.tagline} zh={project.tagline_zh} />
         </p>
 
+        {project.stats.length > 0 && (
+          <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {project.stats.map((stat, i) => (
+              <div
+                key={i}
+                className="rounded-lg bg-slate-50 border border-slate-100 px-3 py-3 text-center"
+              >
+                <div className="text-xl sm:text-2xl font-bold text-brand">
+                  {stat.value}
+                </div>
+                <div className="mt-1 text-[11px] sm:text-xs text-slate-500 leading-snug">
+                  <LocaleText en={stat.label} zh={stat.label_zh || stat.label} />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
         <div className="mt-4 flex flex-wrap gap-2">
           {project.skills.map((skill) => (
             <span

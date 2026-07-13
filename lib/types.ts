@@ -1,3 +1,9 @@
+export interface ProjectStat {
+  value: string;
+  label: string;
+  label_zh?: string;
+}
+
 export interface Project {
   id: string;
   slug: string;
@@ -10,6 +16,7 @@ export interface Project {
   content: string;
   content_zh: string;
   group: "AI" | "ML" | "Analytics";
+  stats: ProjectStat[];
 }
 
 export interface Post {

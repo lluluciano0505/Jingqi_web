@@ -26,6 +26,7 @@ export function getAllProjects(): Project[] {
       content: "",
       content_zh: "",
       group: (data.group as Project["group"]) ?? "Analytics",
+      stats: Array.isArray(data.stats) ? data.stats : [],
     };
   });
 }
@@ -50,5 +51,6 @@ export async function getProjectBySlug(slug: string): Promise<Project | null> {
     content: await markdownToHtml(en),
     content_zh: zh ? await markdownToHtml(zh) : "",
     group: (data.group as Project["group"]) ?? "Analytics",
+    stats: Array.isArray(data.stats) ? data.stats : [],
   };
 }
