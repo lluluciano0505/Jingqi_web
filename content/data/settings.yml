@@ -3,25 +3,24 @@
 
 logo: '/assets/img/musa-logo.png'
 
-intro_title: Urban Data & AI Engineer
-intro_title_zh: 城市数据与 AI 工程师
+intro_title: Applied AI & Data Workflow Builder
+intro_title_zh: 应用 AI 与 Agent 工作流实践者
 intro_text: |
-  My background is in geography and social data science. Through urban research, I came to a conviction: cities don't suffer from a lack of data — they suffer from fragmentation. Valuable documents, records, and spatial traces exist everywhere, but rarely in a form that can actually inform decisions.
+  I'm Jingqi Lu, a 2026 M.S. graduate in Urban Spatial Analytics at the University of Pennsylvania (GPA 3.93), currently based in Shanghai. I use LLMs and agent workflows as practical production tools rather than leaving them as abstract research topics.
 
-  That's what brought me to the M.S. in Urban Spatial Analytics (MUSA) at UPenn — to work at the intersection of AI and urban systems, and to build tools that turn unstructured urban information into structured, queryable knowledge.
+  In practice, I apply them in two directions: large-scale information collection and structuring that manual teams cannot cover efficiently, and AI-assisted quality-control loops embedded in day-to-day delivery.
 
-  Currently leading a document intelligence system at Henning Larsen — using LLM and VLM pipelines to automatically parse large-scale architectural project files. Also building an urban events database at UPenn with AI agents. Both projects share the same core logic: make messy information usable.
-
-  Technical focus: Python, data pipelines, geospatial data engineering, machine learning, LLM/VLM integration, and agentic systems. Interested in data infrastructure, urban analytics, and applied AI roles.
+  I've shipped that approach across industrial data, urban research, and architectural practice. I'm currently working in industrial data operations while building applied AI systems for messy, high-volume knowledge workflows.
 intro_text_zh: |
-  我的本科背景是地理学与社会数据科学。在城市研究的过程中，我逐渐意识到：困扰城市决策的从来不是数据的匮乏，而是信息的混乱——大量有价值的文件、记录、轨迹数据散落各处，却难以被有效整合和利用。
+  我是卢璟琦，宾夕法尼亚大学城市空间分析理学硕士（2026 届，GPA 3.93），目前在上海工作。我把大模型与 Agent 工作流当作日常生产力工具使用，而不是停留在概念层面。
 
-  这个判断促使我选择在宾夕法尼亚大学攻读城市空间分析硕士（MUSA），研究方向聚焦于如何以 AI 作为生产力工具，将非结构化的城市信息转化为可查询、可支撑决策的结构化知识。
+  一方面，我用它完成人力难以覆盖的信息采集、整理与结构化；另一方面，也把它嵌入日常质检流程，用来辅助判断、减少重复劳动，并稳定交付质量。
 
-  目前正在 Henning Larsen 主导建筑文档智能分类系统的研发，并在宾大构建城市活动时空数据库——两个项目的核心逻辑一致：用 LLM 管线和智能体架构，让散乱的信息变得可用。
+  这些方法已经在工业数据、城市研究与建筑设计三类场景中实际落地。当前关注应用 AI、数据工作流、智能体系统编排，以及面向真实业务的生产化质量控制。
+contact_email: jingqiluu@gmail.com
+location: Shanghai, China
+location_zh: 上海，中国
 
-  技术方向涵盖 Python、数据管道、地理空间数据工程、机器学习、LLM/VLM 集成与 AI 智能体架构。专注数据基础设施、城市数据分析与应用 AI 方向。
-  
 resume: '/resume'
 resume_link_title: View CV
 
@@ -38,13 +37,13 @@ social_label: Connect
 social:
 - {icon: 'github',   link: 'https://github.com/lluluciano0505'}
 - {icon: 'linkedin', link: 'https://www.linkedin.com/in/jingqi-lu-04a910266'}
-- {icon: 'envelope', link: 'mailto:lluluciano0505@gmail.com'}
+- {icon: 'envelope', link: 'mailto:jingqiluu@gmail.com'}
 
 #-------------------------------
 # SEO Section
 
 seo:
-  description: 'Jingqi Lu | MUSA Student at UPenn | Spatial Data, AI Agent Modelling, Mobility & Spatial Justice'
+  description: 'Jingqi Lu | Applied AI, agent workflows, industrial data operations, and urban analytics'
   rel-author: ''
   rel-publisher: ''
 

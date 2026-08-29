@@ -54,6 +54,9 @@ export interface SiteSettings {
   intro_title_zh: string;
   intro_text: string;
   intro_text_zh: string;
+  contact_email: string;
+  location: string;
+  location_zh: string;
   social: { icon: string; link: string }[];
   resume: string;
 }

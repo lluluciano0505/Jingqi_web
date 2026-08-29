@@ -25,7 +25,7 @@ function EmailIcon() {
 const socials = [
   { label: "GitHub", href: "https://github.com/lluluciano0505", Icon: GithubIcon },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/jingqi-lu-04a910266", Icon: LinkedinIcon },
-  { label: "Email", href: "mailto:lluluciano0505@gmail.com", Icon: EmailIcon },
+  { label: "Email", href: "mailto:jingqiluu@gmail.com", Icon: EmailIcon },
 ];
 
 export default function Footer() {

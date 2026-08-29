@@ -8,9 +8,9 @@ import { LocaleProvider } from "@/context/LocaleContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jingqi Lu — AI & Geospatial ML Engineer",
+  title: "Jingqi Lu — Applied AI & Data Workflow Builder",
   description:
-    "Personal portfolio of Jingqi Lu — AI, geospatial ML, and urban data engineering.",
+    "Personal portfolio of Jingqi Lu — applied AI, agent workflows, industrial data operations, and urban analytics.",
 };
 
 export default function RootLayout({

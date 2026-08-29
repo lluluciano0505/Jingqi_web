@@ -11,38 +11,38 @@
   period: 2025.08 - 2026.05
   latitude: 39.9526
   longitude: -75.1932
-  summary: Graduate study combining spatial data science, machine learning, and urban systems analysis.
-  summary_zh: 空间数据科学、机器学习与城市系统分析方向的研究生学习。
+  summary: Graduate training in spatial data science, geospatial analysis, remote sensing ML, and applied statistics.
+  summary_zh: 研究方向涵盖统计与数据挖掘、地理空间分析与遥感机器学习。
   details:
-    - "Relevant coursework: Statistics & Data Mining | Python for Geospatial | Urban Sustainability AI | Remote Sensing & ML | Behavioral & Network Science"
-    - GPA 3.93 / 4.0 (Top 5%)
+    - GPA 3.93 / 4.0
+    - "Relevant coursework: Statistics & Data Mining | Geospatial Analysis | Remote Sensing Machine Learning"
   details_zh:
-    - "相关课程：统计与数据挖掘 | Python地理空间分析 | 城市可持续AI | 遥感与机器学习 | 行为与网络科学"
-    - "GPA 3.93 / 4.0（前5%）"
+    - "GPA 3.93 / 4.0"
+    - "相关课程：统计与数据挖掘、地理空间分析、遥感机器学习"
   tags:
     - MUSA
-    - Geospatial Data Science
-    - Urban Analytics
+    - Geospatial Analysis
+    - Remote Sensing ML
 
 - city: London
   region: United Kingdom
   institution: University College London
   institution_zh: 伦敦大学学院
   role: B.A. in Geography (Social Data Science)
-  role_zh: 地理学学士（社会数据科学方向）
+  role_zh: 地理学（社会数据科学）文学学士
   section: Education
   category: Degree
   period: 2022.09 - 2025.06
   latitude: 51.5246
   longitude: -0.1340
-  summary: Bachelor's training in geography, social data science, and computational methods for spatial analysis.
-  summary_zh: 地理学、社会数据科学与空间分析计算方法的本科培养。
+  summary: Undergraduate training in geography, social data science, data analysis, geocomputation, and machine learning applications.
+  summary_zh: 本科阶段接受地理学与社会数据科学训练，重点涵盖数据分析、地理计算与机器学习应用。
   details:
-    - "Relevant coursework: Data Analysis | Geocomputation | Cartography & Data Visualization | Applied Machine Learning"
     - Awarded Second Class Honours, Upper Division (2:1)
+    - "Relevant coursework: Data Analysis | Geocomputation | Machine Learning Applications"
   details_zh:
-    - "相关课程：数据分析 | 地理计算 | 地图学与数据可视化 | 应用机器学习"
-    - "荣获二级甲等荣誉学士学位（2:1）"
+    - "二等一级荣誉（2:1）"
+    - "相关课程：数据分析、地理计算、机器学习应用"
   tags:
     - Geography
     - Social Data Science
@@ -52,85 +52,103 @@
   region: Netherlands
   institution: University of Amsterdam
   institution_zh: 阿姆斯特丹大学
-  role: Erasmus Exchange — B.A. Geography & Planning
-  role_zh: 伊拉斯谟交换生——地理与规划学士
+  role: Erasmus Exchange — Geography & Planning
+  role_zh: 地理与规划（伊拉斯谟交换）
   section: Education
   category: Exchange
   period: 2024.09 - 2024.12
   latitude: 52.3559
   longitude: 4.9550
-  summary: Exchange term focused on inequality, migration, and planning perspectives in European urban contexts.
-  summary_zh: 交换学期，专注于欧洲城市背景下的不平等、移民与规划视角。
+  summary: Exchange term in geography and planning with exposure to European urban perspectives.
+  summary_zh: 伊拉斯谟交换学期，学习地理与规划相关课程，拓展欧洲城市研究视角。
   details:
-    - Relevant coursework in migration and population dynamics.
-    - Relevant coursework in geography of inequality.
+    - Exchange study in geography and planning.
   details_zh:
-    - 移民与人口动态相关课程。
-    - 不平等地理学相关课程。
+    - 地理与规划方向伊拉斯谟交换学习。
   tags:
     - Exchange
-    - Migration
+    - Geography
     - Planning
 
 # Experience
+
+- city: Beijing
+  region: China
+  institution: Yunteng Zhida
+  institution_zh: 云腾智达
+  role: Industrial Data Specialist
+  role_zh: 工业数据专员
+  section: Experience
+  category: Industry
+  period: 2026.07 - Present
+  latitude: 39.9042
+  longitude: 116.4074
+  summary: Lead data operations and AI-assisted quality control for multilingual industrial data delivery across distributed BPO teams.
+  summary_zh: 负责工业数据运营，并推动 AI 辅助标注与质检流程在跨国 BPO 团队中的落地。
+  details:
+    - "Coordinate scheduling and delivery across 6 countries and 99 BPO operators, managing timelines and daily throughput of roughly 700 records while safeguarding quality and pace."
+    - "Co-develop an AI data annotation system with the data science team; it has already been piloted in text-heavy and reasoning-intensive labeling scenarios."
+    - "Built an LLM-based QA skill to assist human judgment, and designed bilingual SOP training delivered in English to overseas BPO teams supporting ByteDance-related work."
+  details_zh:
+    - "负责数据运营，统筹 6 个国家、99 名 BPO 作业人员的排期与交付，制定作业 timeline，日均处理数据量约 700 条，并把关验收以保障交付质量与进度。"
+    - "与数据科学团队协作开发 AI 数据标注系统，目前已在重文字与推理类标注场景完成初步落地。"
+    - "基于大模型自建产出质检 skill，用于辅助人工判断；同时主导工业 SOP 培训设计与实施，以英文为海外 BPO 团队授课，确保跨团队交付口径一致，服务字节跳动相关业务。"
+  tags:
+    - Data Operations
+    - AI Annotation
+    - Quality Control
+    - Cross-border Collaboration
 
 - city: Philadelphia
   region: United States
   institution: University of Pennsylvania
   institution_zh: 宾夕法尼亚大学
   role: Research Assistant
-  role_zh: 研究助理
+  role_zh: 科研助理
   section: Experience
   category: Research
   period: 2026.02 - 2026.05
   latitude: 39.9526
   longitude: -75.1932
-  summary: Designed and implemented a 4-stage Multi-Agent scraping pipeline covering 1,600+ libraries, museums, and arts centers across Pennsylvania.
-  summary_zh: 设计并实现了一个四阶段多智能体抓取管线，覆盖宾夕法尼亚州1,600余家图书馆、博物馆和艺术中心。
+  summary: Built a six-agent system that automated urban cultural event collection, triage, and knowledge-graph generation for public facilities.
+  summary_zh: 设计六 Agent 协同系统，实现城市文化活动数据从检索、抓取到知识图谱构建的全流程自动化。
   details:
-    - "Designed and implemented a 4-stage Multi-Agent scraping pipeline (OSM venue discovery → homepage navigation → event-page extraction → Perplexity fallback) covering 1,600+ libraries, museums, and arts centers across Pennsylvania to automatically collect event time, location, and type data."
-    - "Built a SQLite-backed adaptive memory system maintaining an independent Playbook per venue (known event-page URLs, scraping strategies, failure logs), combined with EMA quality feedback and a priority-scheduling algorithm (days overdue × yield × venue weight) enabling continuous self-optimization without human intervention."
-    - "Developed a rule-engine Judge Agent to score (0–1) and adjudicate (accept / review / reject) extraction results, and built a knowledge-graph module supporting cross-venue programming-profile analysis and similar-venue discovery via regex tag extraction and Jaccard similarity."
+    - "Designed a six-agent workflow that could produce a next-month activity list for a U.S. city in about one hour, covering roughly 100 venues and 800 events across public facilities."
+    - "Implemented a layered decision mechanism of rule-based pre-screening plus LLM adjudication, calling the model only on ambiguous samples to control inference cost without sacrificing relevance quality."
+    - "Built a React + SSE live dashboard that exposed venue semantic profiles and cross-venue similarity analysis directly to non-technical users."
   details_zh:
-    - "设计并实现四阶段多智能体抓取管线（OSM场馆发现 → 主页导航 → 活动页面抽取 → Perplexity兜底），覆盖宾夕法尼亚州1,600余家图书馆、博物馆和艺术中心，自动采集活动时间、地点与类型数据。"
-    - "构建基于SQLite的自适应记忆系统，为每家场馆维护独立Playbook（已知活动页面URL、抓取策略、失败日志），结合EMA质量反馈与优先级调度算法（逾期天数 × 产出率 × 场馆权重），实现无需人工干预的持续自优化。"
-    - "开发规则引擎裁判智能体，对抽取结果进行0–1评分并作出接受/审核/拒绝裁定；构建知识图谱模块，通过正则标签抽取与Jaccard相似度支持跨场馆编程画像分析与相似场馆发现。"
+    - "设计六 Agent 协同系统，实现城市文化活动数据从检索、抓取到知识图谱构建的全流程自动化：可在 1 小时内产出美国某城市未来一个月全市公共设施的活动清单（覆盖约 100 个场馆 / 800 条活动）。"
+    - "设计“规则预筛 + 大模型精判”的分层判断机制，仅对规则无法确定的样本调用大模型，在保证相关性判断质量的前提下控制推理成本。"
+    - "构建基于 React 与 SSE 的实时可视化仪表盘，将场馆语义画像与场馆间相似性分析结果直接交付给非技术使用者。"
   tags:
-    - Multi-Agent Systems
-    - Web Scraping
-    - SQLite
-    - Urban Events
+    - Agent Systems
+    - Urban Knowledge Graphs
+    - React
+    - SSE
 
-- city: Copenhagen
-  region: Denmark
-  institution: Henning Larsen
-  role: Data Classification System for Architectural Practice
-  role_zh: 建筑实践数据分类系统
+- city: Hefei
+  region: China
+  institution: New Oriental Future Abroad
+  institution_zh: 新东方前途出国
+  role: IELTS Teaching Assistant
+  role_zh: 雅思助教
   section: Experience
-  category: Research Practice
-  period: 2026.01 - Present
-  latitude: 55.6761
-  longitude: 12.5683
-  summary: Designed and deployed an AI pipeline to fully automate classification of 500+ unstructured architectural documents from large-scale urban planning projects.
-  summary_zh: 设计并部署了一个AI管线，实现500余份大型城市规划项目非结构化建筑文档的全自动分类。
+  category: Teaching
+  period: 2023.07 - 2023.09
+  latitude: 31.8206
+  longitude: 117.2272
+  summary: Supported IELTS speaking instruction, mock-paper grading, and written feedback for student preparation.
+  summary_zh: 承担雅思口语教学，并完成模拟试卷批改与书面反馈。
   details:
-    - "Designed and deployed a 4-layer LLM classification pipeline (routing extraction → 7-dimensional classification → design-influence scoring → risk review) to fully automate classification of 500+ unstructured architectural documents from large-scale urban planning projects such as Faelledby."
-    - "Implemented two RAG modes: folder-sibling RAG for context recall from adjacent files, and project intelligence RAG for extracting open design decisions from meeting minutes, enhancing project-context awareness."
-    - Designed a dynamic VLM Agent Gate that automatically determines whether to activate the vision model based on pre-screening signals, reducing unnecessary API calls while maintaining accuracy.
-    - "Built a design-influence scoring model (0–100) using a 4-dimensional geometric mean covering constraint rigidity, decision-chain position, phase alignment, and substitutability, quantifying each document's strategic impact on active design decisions to drive Review Queue prioritization."
-    - "Integrated multiple LLMs/VLMs via OpenRouter with 10-way parallel processing; supports incremental mode and conditional selective re-runs for production efficiency and iteration flexibility."
+    - Delivered IELTS speaking instruction and practice coaching.
+    - Graded mock papers and wrote structured feedback for more than 20 students.
   details_zh:
-    - "设计并部署四层LLM分类管线（路由抽取 → 七维分类 → 设计影响力评分 → 风险审查），全自动处理Faelledby等大型城市规划项目中500余份非结构化建筑文档。"
-    - "实现两种RAG模式：同文件夹邻近文件上下文召回RAG，以及从会议纪要中提取开放设计决策的项目智能RAG，提升项目上下文感知能力。"
-    - "设计动态VLM智能体门控，根据预筛信号自动决定是否激活视觉模型，在保持精度的同时减少不必要的API调用。"
-    - "构建设计影响力评分模型（0–100），采用涵盖约束刚性、决策链位置、阶段对齐度和可替代性的四维几何均值，量化每份文档对当前活跃设计决策的战略影响，驱动审查队列优先级排序。"
-    - "通过OpenRouter集成多款LLM/VLM，支持10路并行处理；支持增量模式与条件性选择性重跑，兼顾生产效率与迭代灵活性。"
+    - 承担雅思口语教学，完成模拟试卷批改与书面反馈。
+    - 累计服务学员 20 余人。
   tags:
-    - LLM Pipeline
-    - RAG
-    - VLM
-    - OpenRouter
-    - Data Taxonomy
+    - Teaching
+    - Communication
+    - Feedback
 
 - city: Qingdao
   region: China
@@ -152,33 +170,9 @@
     - Participated end-to-end in tendering projects, handling data organization and visualization, bid-document writing, and presentation preparation.
   details_zh:
     - 通过关键词分类与文本结构化，系统整理分析数百条微信客户反馈，为销售团队提炼高频需求与共性痛点。
-    - 在Excel中核验并建模招标成本数据，协助估算竞争性报价区间以支持报价决策。
+    - 在 Excel 中核验并建模招标成本数据，协助估算竞争性报价区间以支持报价决策。
     - 全程参与招标项目，负责数据整理与可视化、投标文件撰写及演示材料制作。
   tags:
     - Data Analysis
     - Excel
     - Business Support
-
-- city: Hefei
-  region: China
-  institution: New Oriental Future Abroad
-  institution_zh: 新东方前途出国
-  role: IELTS Teaching Assistant
-  role_zh: 雅思教学助理
-  section: Experience
-  category: Teaching
-  period: 2023.07 - 2023.09
-  latitude: 31.8206
-  longitude: 117.2272
-  summary: Supported IELTS teaching delivery and student preparation in speaking and vocabulary development.
-  summary_zh: 协助雅思教学，重点辅导学生口语及词汇备考。
-  details:
-    - Led IELTS speaking practice sessions, providing targeted feedback on fluency, pronunciation, and coherence.
-    - Organized vocabulary quizzes and graded mock IELTS papers with detailed written feedback.
-  details_zh:
-    - 主导雅思口语练习课，就流利度、发音和连贯性提供有针对性的反馈。
-    - 组织词汇测验并批改雅思模拟试卷，附详细书面点评。
-  tags:
-    - Teaching
-    - Communication
-    - Assessment

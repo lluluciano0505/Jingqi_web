@@ -36,6 +36,14 @@ function EmailIcon() {
   );
 }
 
+function LocationIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden>
+      <path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
+    </svg>
+  );
+}
+
 const iconMap: Record<string, React.FC> = {
   github: GithubIcon,
   linkedin: LinkedinIcon,
@@ -59,6 +67,11 @@ export default function Hero({ settings }: HeroProps) {
     locale === "zh" && settings.intro_text_zh
       ? settings.intro_text_zh
       : settings.intro_text;
+
+  const location =
+    locale === "zh" && settings.location_zh
+      ? settings.location_zh
+      : settings.location;
 
   const paragraphs = introText
     .split(/\n\n+/)
@@ -85,6 +98,27 @@ export default function Hero({ settings }: HeroProps) {
             >
               {introTitle}
             </motion.p>
+
+            <motion.div
+              className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-500"
+              {...fadeUp(0.15)}
+            >
+              {location ? (
+                <span className="inline-flex items-center gap-1.5">
+                  <LocationIcon />
+                  <span>{location}</span>
+                </span>
+              ) : null}
+              {settings.contact_email ? (
+                <a
+                  href={`mailto:${settings.contact_email}`}
+                  className="inline-flex items-center gap-1.5 hover:text-brand transition-colors"
+                >
+                  <EmailIcon />
+                  <span>{settings.contact_email}</span>
+                </a>
+              ) : null}
+            </motion.div>
 
             <motion.div
               className="mt-6 max-w-2xl space-y-3 text-slate-600 leading-relaxed"
@@ -138,7 +172,7 @@ export default function Hero({ settings }: HeroProps) {
           >
             <div className="w-40 h-40 sm:w-52 sm:h-52 rounded-full overflow-hidden ring-4 ring-brand/20 shadow-lg">
               <Image
-                src="/images/Jingqi_pic.jpg"
+                src="/images/Jingqi_pic.png"
                 alt="Jingqi Lu"
                 width={208}
                 height={208}
