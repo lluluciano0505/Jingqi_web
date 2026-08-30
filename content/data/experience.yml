@@ -99,6 +99,33 @@
     - Quality Control
     - Cross-border Collaboration
 
+- city: Copenhagen
+  region: Denmark
+  institution: Henning Larsen
+  institution_zh: Henning Larsen
+  role: DataTaxonomy Research Collaboration
+  role_zh: DataTaxonomy 建筑文档智能分类合作
+  section: Experience
+  category: Research Practice
+  period: 2026.01 - 2026.06
+  latitude: 55.6761
+  longitude: 12.5683
+  summary: Built an AI document-classification workflow for architectural practice, covering routing, structured taxonomy, cost control, and review design.
+  summary_zh: 与丹麦国际建筑事务所合作，围绕建筑实践文档分类构建 AI 工作流，涵盖路由提取、结构化分类、成本控制与审查机制设计。
+  details:
+    - "Designed and deployed a four-layer pipeline for 3,000+ unstructured project documents: routing extraction, seven-dimensional classification, design-impact scoring, and risk review."
+    - "Combined pipeline stages with agent-style gating so vision models were only invoked on drawings, renderings, and other visual-heavy files."
+    - "Reduced processing cost to roughly RMB 0.04–0.5 per document, about 95% lower than OCR/VLM-heavy alternatives; the work is now being developed into a co-first-authored paper."
+  details_zh:
+    - "与丹麦某国际建筑事务所合作，针对 3000 余份非结构化项目文档设计并部署四层分类流水线：路由提取 → 七维分类 → 影响力评分 → 风险审查。"
+    - "将 Pipeline 与 Agent 式门控机制结合，仅在识别到图纸、渲染图等视觉内容时调用视觉模型。"
+    - "单文档处理成本控制在约 0.04–0.5 元，较传统 OCR 与 VLM 方案降低约 95%；相关成果正整理为共同第一作者论文。"
+  tags:
+    - Document Intelligence
+    - Agent Workflows
+    - Vision Model Gating
+    - Applied Research
+
 - city: Philadelphia
   region: United States
   institution: University of Pennsylvania
